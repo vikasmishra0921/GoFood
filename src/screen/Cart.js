@@ -1,13 +1,21 @@
 import React from "react";
 import Delete from "@mui/icons-material/Delete";
 import { useCart, useDispatchCart } from "../component/ContextReducer";
-
+import { Helmet } from "react-helmet";
 export default function Cart() {
   let data = useCart();
   let dispatch = useDispatchCart();
   if (data.length === 0) {
     return (
       <div>
+
+
+<Helmet>
+        <title>Your Desired Title</title>
+        <link rel="icon" href="/path-to-your-favicon.ico" />
+      </Helmet>
+
+
         <div className="m-5 w-100 text-center fs-3 text-white">
           The Cart is Empty!
         </div>

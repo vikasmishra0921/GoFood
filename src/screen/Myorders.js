@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../component/Navbar";
 import Footer from "../Footer/Footer";
+import { Helmet } from "react-helmet";
 
 export default function Myorder() {
   const [orderData, setOrderData] = useState({});
@@ -36,6 +37,12 @@ export default function Myorder() {
 
   return (
     <div>
+
+ <Helmet>
+        <title>MyOrders</title>
+        <link rel="icon" href="/path-to-your-favicon.ico" />
+      </Helmet>
+    
       <Navbar />
       <div className="container">
         <div className="row">
